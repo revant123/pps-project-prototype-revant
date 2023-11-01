@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resume Maker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body style="background-color: #FFA41B;">
+    <div id="body" class="container">
+        <h1 style="color: #219C90;">Resume Maker</h1>
+        <form id="resumeForm" onsubmit="createResume(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+            <label for="contactInfo">Your Contact Information:</label>
+            <input type="text" id="contactInfo" name="contactInfo" placeholder="Your Contact Information" required><br><br>
+
+            <label for="hobbies">Your Hobbies:</label>
+            <input type="text" id="hobbies" name="hobbies" placeholder="Your Hobbies" required><br><br>
+
+            <label for="education">Your Education:</label>
+            <input type="text" id="education" name="education" placeholder="Your Education" required><br><br>
+
+            <label for="experience">Your Experience:</label>
+            <input type="text" id="experience" name="experience" placeholder="Your Experience" required><br><br>
+
+            <label for="major">Your Major:</label>
+            <input type="text" id="major" name="major" placeholder="Your Major" required><br><br>
+
+            <label for="university">University Name:</label>
+            <input type="text" id="university" name="university" placeholder="University Name" required><br><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="City" required><br><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="State" required><br><br>
+
+            <label for="coursework">Relevant Coursework:</label><br>
+            <input type="text" id="course1" name="course1" placeholder="Course 1"><br>
+            <input type="text" id="course2" name="course2" placeholder="Course 2"><br>
+            <input type="text" id="course3" name="course3" placeholder="Course 3"><br>
+            <input type="text" id="course4" name="course4" placeholder="Course 4"><br>
+            <input type="text" id="course5" name="course5" placeholder="Course 5"><br><br>
+
+            <label for="technicalSkills">Technical Skills:</label><br>
+            <input type="text" id="skill1" name="skill1" placeholder="Technical Skill 1"><br>
+            <input type="text" id="skill2" name="skill2" placeholder="Technical Skill 2"><br>
+            <input type="text" id="skill3" name="skill3" placeholder="Technical Skill 3"><br><br>
+
+            <label for="internships">Internships:</label><br>
+            <input type="text" id="internship1" name="internship1" placeholder="Internship 1 Position"><br>
+            <input type="text" id="internship2" name="internship2" placeholder="Internship 2 Position"><br><br>
+
+            <label for="extracurricular">Extracurricular Activities:</label><br>
+            <input type="text" id="activity1" name="activity1" placeholder="Extracurricular Activity 1"><br>
+            <input type="text" id="activity2" name="activity2" placeholder="Extracurricular Activity 2"><br><br>
+
+            <label for="awards">Awards and Achievements:</label><br>
+            <input type="text" id="award1" name="award1" placeholder="Award 1"><br>
+            <input type="text" id="award2" name="award2" placeholder="Award 2"><br><br>
+
+            <label for="certifications">Certifications:</label><br>
+            <input type="text" id="certification1" name="certification1" placeholder="Certification 1"><br>
+            <input type="text" id="certification2" name="certification2" placeholder="Certification 2"><br><br>
+
+            <label for="languages">Languages:</label><br>
+            <input type="text" id="language1" name="language1" placeholder="Language 1"><br>
+            <input type="text" id="language2" name="language2" placeholder="Language 2"><br><br>
+
+            <input type="submit" value="Generate Resume">
+        </form>
+    </div>
+
+    <script>
+        function createResume(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const contactInfo = document.getElementById('contactInfo').value;
+            const hobbies = document.getElementById('hobbies').value;
+            const education = document.getElementById('education').value;
+            const experience = document.getElementById('experience').value;
+            const major = document.getElementById('major').value;
+            const university = document.getElementById('university').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const course1 = document.getElementById('course1').value;
+            const course2 = document.getElementById('course2').value;
+            const course3 = document.getElementById('course3').value;
+            const course4 = document.getElementById('course4').value;
+            const course5 = document.getElementById('course5').value;
+            const skill1 = document.getElementById('skill1').value;
+            const skill2 = document.getElementById('skill2').value;
+            const skill3 = document.getElementById('skill3').value;
+            const internship1 = document.getElementById('internship1').value;
+            const internship2 = document.getElementById('internship2').value;
+            const activity1 = document.getElementById('activity1').value;
+            const activity2 = document.getElementById('activity2').value;
+            const award1 = document.getElementById('award1').value;
+            const award2 = document.getElementById('award2').value;
+            const certification1 = document.getElementById('certification1').value;
+            const certification2 = document.getElementById('certification2').value;
+            const language1 = document.getElementById('language1').value;
+            const language2 = document.getElementById('language2').value;
+
+            const resumeContent = `
+[Your Name]
+${name}
+
+Contact Information:
+${contactInfo}
+
+Hobbies:
+${hobbies}
+
+Education:
+${education}
+
+Experience:
+${experience}
+
+Objective:
+Seeking a challenging position or internship opportunity in the field of ${major} to apply and enhance my technical skills, while contributing to innovative projects.
+
+Education:
+Bachelor of Technology (B.Tech) in ${major}
+${university}, ${city}, ${state}
+
+Relevant Coursework:
+- ${course1}
+- ${course2}
+- ${course3}
+- ${course4}
+- ${course5}
+
+Technical Skills:
+- ${skill1}
+- ${skill2}
+- ${skill3}
+
+Internships:
+1. ${internship1}
+2. ${internship2}
+
+Extracurricular Activities:
+- ${activity1}
+- ${activity2}
+
+Awards and Achievements:
+- ${award1}
+- ${award2}
+
+Certifications:
+- ${certification1}
+- ${certification2}
+
+Languages:
+- ${language1}
+- ${language2}
+
+References:
+Available upon request.
+            `;
+
+            const newPage = window.open('');
+            newPage.document.write('<html><head><title>Generated Resume</title></head><body><pre>' + resumeContent + '</pre></body></html>');
+        }
+    </script>
+</body>
+
+</html>
